@@ -34,3 +34,11 @@
 .file-input-customizado label:hover {
     background-color: #f06e05cc;
 }
+
+@media screen and (max-width: 768px) {
+    .group-buttons {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    
+}
