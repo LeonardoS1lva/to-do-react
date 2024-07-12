@@ -1,0 +1,10 @@
+input:not([type="file"]) {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    outline: none;
+}
