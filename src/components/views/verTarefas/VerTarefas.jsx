@@ -4,25 +4,28 @@ import Header from "../../header/Header";
 import Tarefas from "../../tarefas/Tarefas";
 import Button from "../../buttons/Button";
 
-
 import "./VerTarefas.css";
 import { useState } from "react";
 import { lerLocalStorage } from "../../../utilities/Utilities";
-// import Input from "../../inputs/Input";
 
 function VerTarefas() {
-
   const [tarefas, setTarefas] = useState(() => lerLocalStorage());
 
   return (
-    <div className="content"> 
-        <Header titulo="Tarefas" />
-        <Tarefas tarefas={tarefas} setTarefas={setTarefas} />
+    <div className="content">
+      <Header titulo="Tarefas" />
+      <Tarefas tarefas={tarefas} setTarefas={setTarefas} />
+      <div className="group-buttons">
         <Link to="/">
-            <Button texto="Voltar" />
+          <Button texto="Início" />
         </Link>
-        {/* <Button texto="Exportar" onClick={() => exportarTarefas(tarefas)} />
-        <Input type="file" onChange={(e) => importarTarefasSalvarLocalStorage(e)} /> */}
+        <Link to="/editarTarefas">
+          <Button texto="Editar" />
+        </Link>
+        <Link to="/deletarTarefas">
+          <Button texto="Deletar" />
+        </Link>
+      </div>
     </div>
   );
 }

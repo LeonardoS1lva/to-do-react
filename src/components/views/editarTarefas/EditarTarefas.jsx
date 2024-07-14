@@ -21,7 +21,7 @@ function EditarTarefas() {
       <Tarefas editavel={true} tarefas={tarefas} setTarefas={setTarefas} />
       <div className="group-buttons">
         <Link to="/">
-          <Button texto="Voltar" />
+          <Button texto="Início" />
         </Link>
         <Button
           texto="Exportar Tarefas"
@@ -35,6 +35,12 @@ function EditarTarefas() {
           />
           <label htmlFor="input-file">Importar Tarefas</label>
         </div>
+        <Link to="/deletarTarefas">
+          <Button texto="Deletar" />
+        </Link>
+        <Link to="/verTarefas">
+          <Button texto="Visualizar" />
+        </Link>
       </div>
     </div>
   );

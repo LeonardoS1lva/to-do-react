@@ -6,17 +6,23 @@ table {
 
 table th {
     background-color: #f06e05;
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
 table td {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     padding: 8px;
 }
 
 table tr:nth-child(even) {
     background-color: #ffff;
     color: #000;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 90%;
+    }
 }

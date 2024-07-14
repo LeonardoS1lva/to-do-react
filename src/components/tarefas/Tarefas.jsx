@@ -2,12 +2,11 @@ import { alterarStatus, lerLocalStorage } from "../../utilities/Utilities";
 import Input from "../inputs/Input";
 import "./Tarefas.css";
 
-function Tarefas({editavel = false, tarefas, setTarefas}) {
-
+function Tarefas({ editavel = false, tarefas, setTarefas }) {
   const handleStatusChange = (id) => {
     alterarStatus(id);
     setTarefas(lerLocalStorage());
-  }
+  };
 
   return (
     <table>
@@ -20,8 +19,10 @@ function Tarefas({editavel = false, tarefas, setTarefas}) {
       </thead>
       <tbody>
         {tarefas.map((tarefa) => (
-          
-          <tr key={tarefa.id}>
+          <tr
+            key={tarefa.id}
+            className={tarefa.status && editavel ? "checkboxChecked" : ""}
+          >
             <td>{tarefa.id}</td>
             <td>{tarefa.titulo}</td>
             <td>
